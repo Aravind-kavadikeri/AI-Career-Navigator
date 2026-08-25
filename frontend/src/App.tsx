@@ -6,7 +6,9 @@ import { AICareerAssistant } from './components/ai/AICareerAssistant';
 import { PresentationModeModal } from './components/presentation/PresentationModeModal';
 import { SpaceCosmosSplash } from './components/splash/SpaceCosmosSplash';
 import { Cosmic3DBackground } from './components/effects/Cosmic3DBackground';
+import { App3DScrollEngine } from './components/effects/App3DScrollEngine';
 import { LandingPage } from './pages/LandingPage';
+
 import { OnboardingWizard } from './pages/OnboardingWizard';
 import { AnalysisSimulation } from './pages/AnalysisSimulation';
 import { Dashboard } from './pages/Dashboard';
@@ -118,6 +120,7 @@ const MainAppContent: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-black text-slate-900 dark:text-slate-100 flex flex-col relative perspective-3d-root">
       <Cosmic3DBackground />
+      <App3DScrollEngine />
 
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar
