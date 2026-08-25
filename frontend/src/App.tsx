@@ -4,6 +4,7 @@ import { Navbar } from './components/layout/Navbar';
 import { Sidebar } from './components/layout/Sidebar';
 import { AICareerAssistant } from './components/ai/AICareerAssistant';
 import { PresentationModeModal } from './components/presentation/PresentationModeModal';
+import { SpaceCosmosSplash } from './components/splash/SpaceCosmosSplash';
 import { LandingPage } from './pages/LandingPage';
 import { OnboardingWizard } from './pages/OnboardingWizard';
 import { AnalysisSimulation } from './pages/AnalysisSimulation';
@@ -25,6 +26,7 @@ const MainAppContent: React.FC = () => {
     profile,
     setProfile,
     runAnalysis,
+    loadDemo,
     currentFlow,
     setCurrentFlow
   } = useCareer();
@@ -53,6 +55,16 @@ const MainAppContent: React.FC = () => {
   const handleEditProfile = () => {
     setCurrentFlow('onboarding');
   };
+
+  // If in 3D Space Cosmos Splashscreen
+  if (currentFlow === 'splash') {
+    return (
+      <SpaceCosmosSplash
+        onEnterApp={() => setCurrentFlow('landing')}
+        onLoadDemo={loadDemo}
+      />
+    );
+  }
 
   // If in Onboarding flow
   if (currentFlow === 'onboarding') {

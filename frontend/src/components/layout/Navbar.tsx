@@ -10,7 +10,8 @@ import {
   Menu,
   X,
   Play,
-  Palette
+  Palette,
+  Globe
 } from 'lucide-react';
 import { useCareer } from '../../context/CareerContext';
 import { ThemeSelectorModal } from './ThemeSelectorModal';
@@ -79,6 +80,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenMobileMenu, isMobileMenuOp
           {/* Right Actions */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             
+            {/* Launch 3D Cosmos Splash Button */}
+            <button
+              onClick={() => setCurrentFlow('splash')}
+              className="hidden lg:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition shadow-sm"
+              title="Launch 3D Space Cosmos Splashscreen"
+            >
+              <Globe className="w-3.5 h-3.5 text-teal-500" />
+              <span>3D Cosmos</span>
+            </button>
+
             {/* Try Demo Button */}
             <button
               onClick={loadDemo}

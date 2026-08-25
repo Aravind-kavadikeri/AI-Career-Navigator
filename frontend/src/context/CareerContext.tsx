@@ -10,7 +10,7 @@ import {
 import { api } from '../services/api';
 import confetti from 'canvas-confetti';
 
-export type AppFlow = 'landing' | 'onboarding' | 'analyzing' | 'app';
+export type AppFlow = 'splash' | 'landing' | 'onboarding' | 'analyzing' | 'app';
 
 interface CareerContextType {
   profile: StudentProfile;
@@ -100,7 +100,8 @@ export const CareerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [analysisReport, setAnalysisReport] = useState<AnalysisReport | null>(null);
   const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
   const [targetRole, setTargetRoleState] = useState<string>('Data Scientist');
-  const [currentFlow, setCurrentFlow] = useState<AppFlow>('landing');
+  const [currentFlow, setCurrentFlow] = useState<AppFlow>('splash');
+
   
   // Theme state persisted in localStorage
   const [themeMode, setThemeModeState] = useState<ThemeMode>(() => {
