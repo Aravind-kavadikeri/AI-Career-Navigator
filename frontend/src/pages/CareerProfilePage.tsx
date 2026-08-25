@@ -22,7 +22,8 @@ interface CareerProfilePageProps {
 }
 
 const THEME_OPTIONS: { id: ColorTheme; label: string; primary: string; secondary: string; desc: string }[] = [
-  { id: 'emerald', label: 'Emerald Matrix', primary: '#0d9488', secondary: '#10b981', desc: 'AI Cyber & Intelligence' },
+  { id: 'obsidian', label: 'Obsidian Black (Pro Edition)', primary: '#000000', secondary: '#ffffff', desc: 'Ultra-Minimal Pitch Black & Titanium' },
+  { id: 'emerald', label: 'Cyber Emerald', primary: '#0d9488', secondary: '#10b981', desc: 'AI Cyber Intelligence' },
   { id: 'indigo', label: 'Modern Indigo', primary: '#6366f1', secondary: '#8b5cf6', desc: 'SaaS Modern & Royal' },
   { id: 'blue', label: 'Ocean Cloud', primary: '#2563eb', secondary: '#06b6d4', desc: 'Enterprise Cloud' },
   { id: 'rose', label: 'Sunset Crimson', primary: '#e11d48', secondary: '#f43f5e', desc: 'High Energy & Vibrant' },

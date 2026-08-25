@@ -23,6 +23,7 @@ interface SidebarProps {
 }
 
 const PALETTES: { id: ColorTheme; label: string; color: string }[] = [
+  { id: 'obsidian', label: 'Obsidian Black', color: '#18181b' },
   { id: 'emerald', label: 'Emerald', color: '#0d9488' },
   { id: 'indigo', label: 'Indigo', color: '#6366f1' },
   { id: 'blue', label: 'Blue', color: '#2563eb' },

@@ -103,13 +103,13 @@ export const CareerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [currentFlow, setCurrentFlow] = useState<AppFlow>('splash');
 
   
-  // Theme state persisted in localStorage
+  // Theme state persisted in localStorage (Default: Premium Obsidian Black)
   const [themeMode, setThemeModeState] = useState<ThemeMode>(() => {
     return (localStorage.getItem('career_navigator_theme_mode') as ThemeMode) || 'dark';
   });
   
   const [colorTheme, setColorThemeState] = useState<ColorTheme>(() => {
-    return (localStorage.getItem('career_navigator_color_theme') as ColorTheme) || 'emerald';
+    return (localStorage.getItem('career_navigator_color_theme') as ColorTheme) || 'obsidian';
   });
 
   const isDarkMode = themeMode === 'dark' || (themeMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);

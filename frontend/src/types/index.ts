@@ -164,6 +164,7 @@ export type ActiveTab =
   | 'career-explorer'
   | 'progress';
 
-export type ColorTheme = 'emerald' | 'indigo' | 'blue' | 'rose' | 'amber';
+export type ColorTheme = 'obsidian' | 'emerald' | 'indigo' | 'blue' | 'rose' | 'amber';
 export type ThemeMode = 'dark' | 'light' | 'system';
+
 
