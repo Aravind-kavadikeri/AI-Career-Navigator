@@ -145,7 +145,7 @@ export const CareerProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   const toggleTheme = () => {
-    const nextMode = themeMode === 'dark' ? 'light' : 'dark';
+    const nextMode = isDarkMode ? 'light' : 'dark';
     setThemeMode(nextMode);
   };
 
